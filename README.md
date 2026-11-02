@@ -30,17 +30,17 @@
 | `participant_log_template.csv` | 테스트 참가자 기록 양식(실제 개인정보 수집 전 정책 검토 필요) |
 | `.nojekyll` | GitHub Pages 정적 배포 시 Jekyll 처리 생략 |
 
-## GitHub Pages 활성화
+## GitHub Pages 배포
 
-1. GitHub에서 이 저장소를 **Public**으로 생성하고, 위 파일들을 `main` 브랜치 루트에 업로드합니다.
-2. 저장소 **Settings → Pages → Build and deployment**로 이동합니다.
-3. **Source: Deploy from a branch**를 선택합니다.
-4. **Branch: main / (root)**을 선택한 뒤 **Save**를 누릅니다.
-5. GitHub에 표시되는 배포 URL을 열어 화면과 링크를 확인합니다.
+저장소에는 `.github/workflows/deploy-pages.yml` 자동 배포 작업이 설정되어 있습니다.
+`main` 브랜치에 파일이 갱신되면 GitHub Actions가 정적 사이트를 배포하도록 구성했습니다.
 
-개인 계정 `decisionarypro`에 `public-cafe-map`이라는 이름으로 생성하면 예상 주소는 다음과 같습니다(실제 배포 전에는 동작을 보장하지 않습니다):
+1. GitHub 저장소에서 **Actions** 탭의 `Deploy Public Cafe MVP to GitHub Pages` 실행 결과를 확인합니다.
+2. 배포가 활성화되지 않으면 **Settings → Pages → Build and deployment → Source**에서 **GitHub Actions**를 선택합니다.
+3. **Actions** 탭에서 워크플로를 다시 실행하거나 `main`에 변경사항을 커밋합니다.
+4. 배포 성공 후 주소 `https://decisionarypro.github.io/public-cafe-map/` 에서 모바일 화면을 확인합니다.
 
-`https://decisionarypro.github.io/public-cafe-map/`
+**주의:** GitHub 저장소 업로드와 웹사이트 공개 배포는 별도 단계입니다. 배포 상태가 확인되기 전까지 위 URL의 작동을 보장하지 않습니다.
 
 ## 데이터 품질 및 서비스 운영 주의
 
